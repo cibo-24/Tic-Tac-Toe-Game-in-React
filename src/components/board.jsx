@@ -1,16 +1,10 @@
 import { useState } from "react";
 import '../App.css';
-export default function Board ({value}) {
-    const [value, setValue] = useState(null);
-    function handleClick () {
-        setValue('X');
-    }
+// react-dev'de square
+
+export default function Board ({value, onSquareClick}) {
    return (
-    <button 
-    className="square"
-    onClick={handleClick}
-    >
-    {value}
-    </button>
+    // kullanıcı sol üst kareye tıkladığında  onClick prob fonksiyonu çalışır.
+    <button className="square" onClick={onSquareClick}>{value}</button>
    )
 }
